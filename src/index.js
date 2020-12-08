@@ -1,17 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'; //Nos permite usar JSX 
+import ReactDOM from 'react-dom'; //Nos permite renderizar sobre HTML
+// import PrimeraApp from './PrimeraApp'; //importando el componente
+import CounterApp from './CounterApp'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import './index.css' //importando css
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+const divRoot = document.querySelector('#root');
+// lo que quiero renderizar, en dónde lo quiero colocar
+// ReactDOM.render(<PrimeraApp saludo="Hola, soy Goku"/>, divRoot);
+ReactDOM.render(<CounterApp />, divRoot);
